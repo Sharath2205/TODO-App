@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+}
+
+body {
+    display: flex;
+    font-family: 'poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #515151;
+    user-select: none;
+}
+
+.container {
+    max-width: 600px;
+    min-width: 200px;
+    width: 100%;
+    height: 500px;
+    padding: 1rem;
+    background-color: #282828;
+    color: #ffaa9d;
+    display: flex;
+    border-radius: 10px;
+    /* overflow-y: scroll; */
+}
+
+.left {
+    padding: 0 10px;
+    width: 250px;
+}
+
+.right {
+    padding: 0 0 0 50px;
+    width: 350px;
+    min-width: 280px;
+    /* overflow-y: scroll; */
+}
+
+h3 {
+    color: white;
+    letter-spacing: 2px;
+    padding: 1rem 0;
+}
+
+
+.input-area {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.input-area label {
+    margin-top: 10px;
+}
+
+label span {
+    color: red;
+}
+
+.input-area input,
+.input-area textarea {
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 3px 40px;
+    margin-top: 1rem;
+    border-radius: 30px;
+    border: none;
+    background-color: #ffaa9d;
+}
+
+h4 {
+    text-align: center;
+    background-color: #fff;
+    color: #1c1c1c;
+    border-radius: 5px;
+    padding: 5px 0;
+    margin: 1rem;
+}
+
+.task-overflow {
+    background-color: #fff;
+}
+
+#tasks {
+    font-size: 14px;
+    user-select: text;
+    display: grid;
+    gap: 0.7rem;
+}
+
+
+.task {
+    background-color: #3d3d3d;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-name {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.date {
+    color: gray;
+    font-size: 12px;
+}
+
+.options {
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.options p {
+    padding: 3px;
+    user-select: none;
+}
+
+.options p:hover {
+    background-color: #282828;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 510px) {
+    body {
+        padding: auto;
+    }
+
+    .container {
+        padding: 1rem;
+        flex-direction: column;
+        height: 100vh;
+        overflow-y: scroll;
+        border-radius: 0px;
+    }
+
+    .button {
+        justify-content: space-evenly;
+    }
+
+    .left {
+        padding: 0;
+        width: 100%;
+    }
+
+    .right {
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 611px) {
+    .right {
+        overflow-y: scroll;
+    }
+}
